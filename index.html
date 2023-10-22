@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ctrlprint - Cotizador de impresiones</title>
+    <link rel="stylesheet" href="styleindex.css">
+</head>
+<body>
+    <main>
+        <div id="main">
+            <div id="container">
+                <div id="intro">   
+                    <h2>IMPRESIONES COLOR</h2>
+                    <h3>RICOH 7110 + RICOH 751 + RICOH 5100</h3>
+                    <p>Sin lí­mite de cobertura / calcular 5 mm. libres de impresión en el perímetro. Tiempo de producción en el día / consulte plazo de entrega por trabajos de tirajes altos. </p>
+                    
+                </div>
+                <div id="formulario">
+                    <form id="cotizacion-form">
+                        <h3>Color:</h3>
+                        <select class="box-select" id="color" name="color">
+                            <option disabled selected="">Seleccionar</option>
+                            <option>Simple Faz</option>
+                            <option>Doble Faz</option>
+                        </select>
+                        <h3>Papel:</h3>
+                        <select class="box-select" name="papel">
+                            <option disabled selected="">Seleccionar</option>
+                            <option>Obra</option>
+                            <option>115g</option>
+                            <option>150g</option>
+                            <option>200g</option>
+                            <option>300g</option>
+                        </select>
+                        <h3>Medida:</h3>
+                        <select class="box-select" name="medida">
+                            <option disabled selected="">Seleccionar</option>
+                            <option>A4</option>
+                            <option>A3</option>
+                            <option>SuperA3</option>
+                        </select>
+                        <h3>Cantidad:</h3>
+                        <input type="number" name="cantidad">
+                        <h3>Corte:</h3>
+                        <select class="box-select" name="corte">
+                            <option disabled selected="">Seleccionar</option>
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                        <br>
+                        <br>
+                        <input type="button" value="Cotizar" onclick="calcularCotizacion()">
+
+                    </form>
+       
+                    <div id="carrito">
+                        <h2>Pedidos Cotizados</h2>
+                        <div id="carrito-list"></div>
+                        <p>Total: $<span id="total-amount">0.00</span></p>
+                        <button onclick="realizarPedido()">Realizar Pedido</button>
+                        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

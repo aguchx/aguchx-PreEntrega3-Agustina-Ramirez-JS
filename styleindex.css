@@ -1,0 +1,41 @@
+
+body{
+    background-color: rgb(189, 189, 189);
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+#container{
+    background-color:#f4f4f4;
+    width: 600px;
+    margin: 150px auto;
+    padding: 20px;
+    justify-content: center;
+    box-shadow: 1fr;
+    align-items: center;
+
+
+}
+h2{
+    padding: 0px 150px;
+    color: rgb(79, 24, 131);
+}
+h3{
+    color: rgb(38, 38, 38);
+}
+h3 h2 p{
+    justify-content: center;
+    align-items: center;
+}
+
+#box-select{
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+#option-select:hover{
+    background-color: blueviolet;
+    color: aliceblue;
+}
