@@ -73,11 +73,11 @@ function actualizarCarrito() {
     const carritoList = document.getElementById("carrito-list");
     carritoList.innerHTML = '';
 
-    let totalAmount = 0;
+    let totalPedidos = 0;
 
     carrito.forEach((cotizacion, index) => {
         const cotizacionElement = document.createElement("div");
-        cotizacionElement.innerHTML = `<p><strong>Cotización ${index + 1}:</strong> Color - ${cotizacion.color}, Papel - ${cotizacion.papel}, Medida - ${cotizacion.medida}, Cantidad - ${cotizacion.cantidad}, Corte - ${cotizacion.corte}, Costo - $${cotizacion.costo.toFixed(2)}</p>`;
+        cotizacionElement.innerHTML = `<p><strong>Cotización ${index + 1}:</strong> Color = ${cotizacion.color}, Papel = ${cotizacion.papel}, Medida = ${cotizacion.medida}, Cantidad = ${cotizacion.cantidad}, Corte - ${cotizacion.corte}, Costo = $${cotizacion.costo.toFixed(2)}</p>`;
 
         const eliminarButton = document.createElement("button");
         eliminarButton.innerText = "Eliminar";
@@ -89,7 +89,7 @@ function actualizarCarrito() {
 
         carritoList.appendChild(cotizacionElement);
 
-        totalAmount += cotizacion.costo;
+        totalPedidos += cotizacion.costo;
     });
 
     const totalAmountElement = document.getElementById("total-amount");
