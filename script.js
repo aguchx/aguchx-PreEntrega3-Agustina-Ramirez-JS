@@ -105,7 +105,7 @@ function eliminarCotizacion(index) {
 }
 
 function realizarPedido() {
-    alert("Pedido realizado. Gracias por su compra.");
+    document.getElementById("pedido").innerHTML = `<p><strong> Pedido realizado. Gracias por su compra.</p>`;
     carrito = [];
     localStorage.setItem('carrito', JSON.stringify(carrito));
     actualizarCarrito();
